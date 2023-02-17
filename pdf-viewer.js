@@ -1,6 +1,7 @@
 (async () => {
   const urlParams = new URLSearchParams(window.location.search);
   const filePath = urlParams.get('src');
+  console.log(filePath);
   const loadingTask = pdfjsLib.getDocument(filePath);
   const pdf = await loadingTask.promise;
 
